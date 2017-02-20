@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/questionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoText="true"
+            android:focusableInTouchMode="true"
+            android:hint="  Question"
+            android:textColor="#242424"
+            android:textColorHint="#242424" />
+
+        <EditText
+            android:id="@+id/answerEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionEditText"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@+id/submitButton"
+            android:autoText="true"
+            android:focusableInTouchMode="true"
+            android:hint="  Answer"
+            android:textColor="#242424"
+            android:textColorHint="#242424" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/questionEditText"
+            android:layout_margin="6dp"
+            android:background="@drawable/arrow" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/unansweredRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/answerEditText">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</LinearLayout>
